@@ -33,13 +33,13 @@ def works():
         
         # check if all required methods exist
         for method in ['enqueue', 'dequeue', 'peek', 'size', 'empty']:
-            if not hasattr(module.Queue, method) or not callable(getattr(cls, method)):
+            if not hasattr(module.Queue, method) or not callable(getattr(module.Queue, method)):
                 raise Exception()
         
         # generate a list to run tests on
         tests = list(string.ascii_uppercase)
         tests += list(range(10))
-        tests = random.shuffle(tests)
+        random.shuffle(tests)
 
         # create an instance of Queue
         queue = module.Queue()
@@ -67,7 +67,7 @@ def works():
         assert queue.size() == 1
         assert test == queue.dequeue()
         assert queue.size() == 0
-
+        
     except Exception as e:
         # throw a general error if anything fails
-        raise check50.Failure(error_text, help=help_text)
+        raise check50.Failure(e, help=help_text)

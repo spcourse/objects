@@ -70,4 +70,4 @@ def works():
         
     except Exception as e:
         # throw a general error if anything fails
-        raise check50.Failure(e, help=help_text)
+        raise check50.Failure(error_text, help=help_text)

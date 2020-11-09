@@ -67,6 +67,13 @@ def works():
         assert queue.size() == 1
         assert test == queue.dequeue()
         assert queue.size() == 0
+
+        # test if dequeueing on an empty queue throws an AssertionError
+        try:
+            queue.dequeue()
+            raise Exception()
+        except AssertionError as e:
+            pass
         
     except Exception as e:
         # throw a general error if anything fails

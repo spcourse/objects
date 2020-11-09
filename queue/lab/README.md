@@ -132,7 +132,7 @@ You can check your implementation using `check50`:
 
     check50 -l minprog/objects/master/queue
 
-If there's anything not quite right with your implementation, `check50` won't provide you with any hints this time. Instead, you might want to try creating an instance of `Queue` yourself to see if everything works as expected. Especially make sure that `dequeue()` throws an `AssertionError` if the queue is empty. 
+If there's anything not quite right with your implementation, `check50` won't provide you with any hints this time. Instead, try adding some additional checks to queue.py yourself to see if everything works as expected. Especially make sure that `dequeue()` throws an `AssertionError` if the queue is empty. 
 
 Got stuck? Feel free to ask for help!
 

@@ -23,10 +23,10 @@ def exists():
 @check50.check(exists)
 def works():
     """queue.py works correctly."""
-    uva.check50.py.compile("cardgame.py")
-    module = uva.check50.py.run("cardgame.py").module
-
     try:
+        uva.check50.py.compile("queue.py")
+        module = uva.check50.py.run("queue.py").module
+
         # check if the class exists
         if not hasattr(module, "Queue"):
             raise Exception()

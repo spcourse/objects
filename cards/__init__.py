@@ -41,6 +41,7 @@ def class_method(cls, method):
     if not hasattr(cls, method) or not callable(getattr(cls, method)):
         raise check50.Failure(f"method '{method}()' does not exist within class '{cls.__name__}.")
 
+        
 def method_arguments(cls, method, required_args):
     # get args
     args = inspect.getfullargspec(getattr(cls, method)).args
@@ -67,7 +68,7 @@ def deck_valid(deck, module):
     for card in deck._cards:
         # check if cards are actually instances of the Card class
         if not isinstance(card, module.Card):
-            raise check50.Failure(f"items in deck are not instances of the 'Card' class, instead found '{type(card)}'.")
+            raise check50.Failure(f"items in deck are not instances of the 'Card' class, instead found '{type(card).__name__}'.")
         
         # check for duplicate cards
         if card.suit + card.value in cards:

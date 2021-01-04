@@ -55,7 +55,7 @@ def method_arguments(cls, method, required_args):
             raise check50.Failure(f"expected method '{method}()' in class '{cls.__name__}' to accept argument '{arg}'")
 
 
-def deck_valid(deck):
+def deck_valid(deck, module):
      # check if 52 different and valid cards are present
     cards = set()
 
@@ -65,6 +65,10 @@ def deck_valid(deck):
 
     # check each card in the deck
     for card in deck._cards:
+        # check if cards are actually instances of the Card class
+        if not isinstance(card, module.Card):
+            raise check50.Failure(f"items in deck are not instances of the 'Card' class, instead found '{type(card)}'.")
+        
         # check for duplicate cards
         if card.suit + card.value in cards:
             raise check50.Failure(f"found the {card.value} of {card.suit} in deck at least twice.")
@@ -175,7 +179,7 @@ def instantiate_cards():
     attributes_present(deck, attributes)
 
     # check if 52 different and valid cards are present
-    deck_valid(deck)
+    deck_valid(deck, module)
 
 
 @check50.check(instantiate_cards)
@@ -198,7 +202,7 @@ def shuffle():
     new_cards = [card.value + card.suit for card in deck._cards]
     if all([original_cards[i] == new_cards[i] for i in range(len(new_cards))]):
         raise check50.Failure("deck didn't change when shuffled.")
-    deck_valid(deck)
+    deck_valid(deck, module)
 
 
 @check50.check(shuffle)

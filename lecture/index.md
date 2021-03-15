@@ -5,11 +5,6 @@
 You might have a look at [this video](https://www.youtube.com/watch?v=apACNr7DC_s) if you need an alternate source.
 
 
-## Notes
-
-Onderstaande lecture notes zijn nog in bewerking!
-
-
 ## Voorgeschiedenis
 
 Objectgeoriënteerd programmeren begint bij **Sketchpad**, een programma om figuren op het scherm te tekenen. Nu nemen we dat redelijk voor lief, maar in 1963 was dat helemaal nieuw. Er kon met een "lichtpen" direct op het scherm getekend worden. Figuren bestonden uit lijnen en hoekpunten die automatisch met elkaar verbonden werden.

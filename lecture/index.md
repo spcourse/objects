@@ -19,13 +19,15 @@ Een programma als OmniGraffle moet op de achtergrond een definitie van alle figu
 
 ![](objects.png)
 
-Wat we nu nog moeten doen is deze objecten onderscheiden in "classes". Dat is nodig omdat bijvoorbeeld een "rechthoek" op een heel andere manier wordt getekend dan een cirkel---simpelweg omdat ze er andere uitzien. We zeggen dat `rectangle1` en `rectangle2` van het type `Rectangle` zijn, en `circle1` is van het type `Circle`. Zo zijn `Rectangle` en `Circle` de twee classes waar het hier om gaat.
+Wat we nu nog moeten doen is deze objecten onderscheiden in "classes". Dat is nodig omdat bijvoorbeeld een "rechthoek" op een heel andere manier wordt getekend dan een cirkel---simpelweg omdat ze er anders uitzien. We zeggen dat `rectangle1` en `rectangle2` van het type `Rectangle` zijn, en `circle1` is van het type `Circle`. Zo zijn `Rectangle` en `Circle` de twee classes waar het hier om gaat.
 
 Nu we niet alleen objecten hebben, maar ook twee "klassen" onderscheiden, kunnen we voor de klasse `Rectangle` beschrijven hoe een rechthoek getekend moet worden op basis van een hoogte en een breedte. En voor de klasse `Circle` beschrijven we hoe een ovaal getekend moet worden, wederom op basis van hoogte en breedte. Dit maakt ook het verschil tussen objecten en classes: per rechthoek-object slaan we op wat de afmetingen zijn, maar de procedure om een rechthoek te tekenen kunnen één keer beschrijven in de klasse.
 
 Een klasse is een concept dat dus vooral bestaat in programmacode, de procedures om iets te doen. Daarnaast kunnen we in een klasse vastleggen *welke* eigenschappen een object van die klasse kan of moet hebben. Hier staat bijvoorbeeld dat een rechthoek een breedte, hoogte, x, y, en een schaduw kan hebben, en een cirkel kan ook ook een breedte, een hoogte, een x, een y, en een schaduw hebben.
 
 ![](objects_and_classes.png)
+
+In het diagram zie je ook pijlen met "is-a" erbij. Dit is om nauwkeurig aan te geven wat de relaties is tussen een object en een klasse. We zeggen bijvoorbeeld **`rectangle2` is a `Rectange`**.
 
 ## Classes in Python
 

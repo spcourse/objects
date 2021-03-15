@@ -162,7 +162,7 @@ Hier een voorbeeld van hoe je een object van de klasse `Queue` zou willen **gebr
     >>> print(q.dequeue())
     3
 
-### Implementie
+### Implementatie
 
 Goed, laten we een stukje van die klasse maken. We beginnen met een hele kale klasse:
 
@@ -269,7 +269,7 @@ De attributen zijn `suit` en `value`, ofwel de kleur en de waarde van de kaart. 
 
 De `Deck`-klasse heeft juist geen attributen, maar een heleboel methods, in dit geval om te schudden (`shuffle`), om een kaart af te geven (`deal`) en wederom de `description`. Deze klasse is dus helemaal **encapsulated**, dat betekent dat we niet van buitenaf kunnen zien hoe het Deck kaarten wordt opgeslagen en we kunnen niet zien wat de volgorde is.
 
-## Implementation details
+### Implementation details
 
 Wat voor Python-datastructuur zouden we kunnen gebruiken voor de `Deck`-klasse?
 
@@ -281,7 +281,7 @@ Wat voor Python-datastructuur zouden we kunnen gebruiken voor de `Deck`-klasse?
 
 - En een lijst is de handige keuze, omdat volgorde weer een rol speelt.
 
-## Relaties
+## Relaties in UML
 
 In UML-diagrammen kunnen we niet alleen klassen specificeren, maar ook de **relaties** tussen de verschillende klassen. In dit geval weten we dat een kaartspel diverse kaarten bevat. We noemen dat vaak een "has-many relation". Dat wordt weergegeven met een pijl:
 

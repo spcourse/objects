@@ -181,10 +181,6 @@ To determine what is relevant, we look at classes from another programmer's pers
 
 In other words, classes' data is kept private and only through their methods should their attributes be manipulated. This idea is called *encapsulation*. However, data classes like `Card` are an exception to this rule. Data classes are purposely designed to hold some basic data, just like a `struct` in C, and attributes are usually manipulated directly, not through methods.
 
-If you have `check50` installed, you can run it as per below. If you don't have `check50` installed, checking the code manually should be enough!
-
-    check50 -l minprog/objects/master/cards
-
 ## Implementation diagram
 
 This is what your classes should look like from an implementation perspective:
@@ -195,13 +191,15 @@ If not quite the same, think about the differences and why you decided to do it 
 
 ## Concepts
 
-**Class** --- all of the code that defines a series of objects. You can instantiate several objects of a class, each containing separate data. For example, in the exercises, you needed 52 individual cards, each with different names. But the code for each card is the same, and defined in the `Card` class.
+**Class** --- this is a detailed description, the definition and a template, of a specific type of object. The class contains all of the code that defines a specific type of object. You can instantiate several objects of a class, each containing separate data. For example, in the exercises, you needed 52 individual cards, each with different names. But the code for each card is the same, and defined in the `Card` class.
+
+**Object** or **Instance** --- a collection of data and methods with a specific state. Where a class can be seen as the blueprint, an object is an instance of that class. In the exercise above, that would be a specific deck, or a specific card in the deck.
 
 **Attribute** or **Field** --- a value stored inside an object. The idea is that you can combine several attributes into one object. For example, you combined "suit" and "value", which together define a unique card in a deck of cards. In other words, each "card" always should have a "suit" and a "value".
 
-**Self** --- if you have a python object like `card1`, you may store data inside such an object by setting `card1.value = ...`. But an object can also manipulate data from within. In that case, use the name `self` to refer to the object's attributes.
+**Self** --- an internal reference to the current instance of the class. For example, if you have a python object like `card1`, you may store data inside such an object by setting `card1.value = ...`. But an object can also manipulate data from within. In that case, use the name `self` to refer to the object's attributes.
 
-**Method** --- a function that is attached to a class. The function may be "called" on each object of that class.
+**Method** --- a function that is attached to a class. The function may be "called" on each instance of that class.
 
 **Initializer** --- a special method that is called when you create an instance of the class, for example: `Card()`. You can also define initializers that accept parameters, so you might call `Card("Ace", "spades")` to create a new instance and immediately fill in some attributes.
 

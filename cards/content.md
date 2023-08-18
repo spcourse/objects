@@ -85,7 +85,7 @@ Now try it out! In the Terminal, **run** `python cardgame.py` and verify the res
 
 In this exercise, a Deck will be a standard deck of hearts, diamonds, clubs and spades, with values Ace through King. It will have three methods: one to shuffle, one to deal a card out of the deck, and one that gives a description:
 
-![A UML representation of the Deck class, containing a cards attribute, which is a list of Card objects and three methods called shuffle, deal and description. None of the methods take arguments.](deck_class.png){: style="max-width:200px;"}
+![A UML representation of the Deck class, containing a cards attribute, which is a list of Card objects and three methods called shuffle, deal and description. None of the methods take arguments.](images/deck_class.png){: style="max-width:200px;"}
 
 Before writing those methods, let's declare the class and add an initializer.
 

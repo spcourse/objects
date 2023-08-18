@@ -16,26 +16,26 @@ help_text = "sorry, no hints on this one. please test your class using the instr
 
 @check50.check()
 def exists():
-    """queue.py exists."""
-    check50.exists("queue.py")
+    """my_queue.py exists."""
+    check50.exists("my_queue.py")
 
 
 @check50.check(exists)
 def works():
-    """queue.py works correctly."""
+    """my_queue.py works correctly."""
     try:
-        uva.check50.py.compile("queue.py")
-        module = uva.check50.py.run("queue.py").module
+        uva.check50.py.compile("my_queue.py")
+        module = uva.check50.py.run("my_queue.py").module
 
         # check if the class exists
         if not hasattr(module, "Queue"):
             raise Exception()
-        
+
         # check if all required methods exist
         for method in ['enqueue', 'dequeue', 'peek', 'size', 'empty']:
             if not hasattr(module.Queue, method) or not callable(getattr(module.Queue, method)):
                 raise Exception()
-        
+
         # generate a list to run tests on
         tests = list(string.ascii_uppercase)
         tests += list(range(10))
@@ -74,7 +74,7 @@ def works():
             raise Exception()
         except AssertionError as e:
             pass
-        
+
     except Exception as e:
         # throw a general error if anything fails
         raise check50.Failure(error_text, help=help_text)

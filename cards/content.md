@@ -165,7 +165,7 @@ In your testing code, add
 
     card = deck.deal()
 
-right after creating the `Deck`. Because the deck hasn't been shuffled at that point, this card should be the King of Spades. Use `print(card.description())` to print the card. **Try** it out!
+right after creating the `Deck`. Because the deck hasn't been shuffled at that point, this card should be the King of Hearts. Use `print(card.description())` to print the card. **Try** it out!
 
 Now test the `shuffle` method! Call it in your testing code and verify that the shuffling is indeed pseudorandom.
 

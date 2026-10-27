@@ -155,7 +155,7 @@ Now, with the code that you have currently written, you can't really see if the 
 
 Now that the deck may be shuffled, it should also be possible to draw cards from it.
 
-**Create** a method `deal` that removes the top card from the `cards` list and `return`s it. "To remove" means that after calling `deal`, the number of cards in `cards` will have decreased by 1.
+**Create** a method `deal` that removes the top card from the `cards` list and `return`s it. "To remove" means that after calling `deal`, the number of cards in `cards` will have decreased by 1. The "top card" from the deck is the last card in the deck list!
 
 Once again, it's possible to re-use standard Python functionality to remove one `Card` from `_cards`. Take a look at the docs for [Python lists](https://docs.python.org/3/tutorial/datastructures.html) and find an appropriate method to do this. Then, use that method in your own `deal` method! Don't forget to actually `return` the card that you got from the deck.
 
@@ -165,7 +165,7 @@ In your testing code, add
 
     card = deck.deal()
 
-right after creating the `Deck`. Because the deck hasn't been shuffled at that point, this card should be the King of Hearts. Use `print(card.description())` to print the card. **Try** it out!
+right after creating the `Deck`. Because the deck hasn't been shuffled at that point, this card should be the King of Spades. Use `print(card.description())` to print the card. **Try** it out!
 
 Now test the `shuffle` method! Call it in your testing code and verify that the shuffling is indeed pseudorandom.
 
